@@ -59,6 +59,10 @@ def signup_view(request: HttpRequest):
             except ValidationError as err:
                 print(f"ValidationError: {err}")
                 messages.error(request, "Your account with this email address (" + email + ") already exists.")
+            except UserEmailTemplate.DoesNotExist:
+                messages.success(request,
+                                 "Your account with email address " + email + " is ready. Please contact support for activation of account.")
+                return redirect('login')
         else:
             messages.error(request, "Oops, we only serve humans.")
     context = {
