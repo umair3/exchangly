@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-    'debug_toolbar',
+    # 'debug_toolbar',
     'rest_framework',
     'import_export',
     'letsencrypt',
@@ -82,7 +82,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -196,18 +196,18 @@ SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_SAMESITE = 'None'
 DOMAIN_NAME = ".exchangly.com"
 
-CSRF_COOKIE_AGE = 31449600  # seconds (approx 1 year)
-CSRF_COOKIE_DOMAIN = '.exchangly.com'
-CSRF_COOKIE_HTTPONLY = True
-CSRF_COOKIE_NAME = 'csrftoken'
-CSRF_COOKIE_PATH = '/'
-CSRF_COOKIE_SAMESITE = 'Lax'
-CSRF_COOKIE_SECURE = True
-CSRF_USE_SESSIONS = False
-# CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'
-CSRF_HEADER_NAME = 'HTTP_X_CSRFTOKEN'
-CSRF_TRUSTED_ORIGINS = ['*.exchangly.com']
-# CSRF_TRUSTED_ORIGINS = ['app.exchangly.com', 'localhost:3000']
+# CSRF_COOKIE_AGE = 31449600  # seconds (approx 1 year)
+# CSRF_COOKIE_DOMAIN = '.exchangly.com'
+# CSRF_COOKIE_HTTPONLY = False
+# CSRF_COOKIE_NAME = 'csrftoken'
+# CSRF_COOKIE_PATH = '/'
+# CSRF_COOKIE_SAMESITE = 'Lax'
+# CSRF_COOKIE_SECURE = True
+# CSRF_USE_SESSIONS = True
+# # CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'
+# CSRF_HEADER_NAME = 'HTTP_X_CSRFTOKEN'
+# CSRF_TRUSTED_ORIGINS = ['*.exchangly.com']
+# # CSRF_TRUSTED_ORIGINS = ['app.exchangly.com', 'localhost:3000']
 
 
 # CORS_ALLOWED_ORIGIN_REGEXES = [
