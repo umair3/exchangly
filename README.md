@@ -1,2 +1,2 @@
 # exchangly
-A Social Notification App
+Create, Send, and Track Emails with the power of AI using this dockerized tool.
