@@ -1,0 +1,26 @@
+[
+    {
+        "title": "No Daily Sending Limit",
+        "symbol": "tick",
+        "strike": false,
+        "value": null
+    },
+    {
+        "title": "Unlimited contacts",
+        "symbol": "tick",
+        "strike": false,
+        "value": null
+    },
+    {
+        "title": "Up to 5K emails/month",
+        "symbol": "tick",
+        "strike": false,
+        "value": null
+    },
+    {
+        "title": "Additional emails",
+        "symbol": "plus",
+        "strike": false,
+        "value": "0.001$/email"
+    }
+]

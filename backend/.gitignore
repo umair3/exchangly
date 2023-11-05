@@ -1,0 +1,6 @@
+sw-accounts-venv
+venv
+__pycache__
+.vscode
+.idea
+.env

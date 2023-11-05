@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+:root {
+  --primary: rgb(60, 8, 118);
+  --secondary: rgba(250, 0, 118, 0.8);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+.container {
+  background-image: linear-gradient(
+    135deg,
+    rgba(60, 8, 118, 0.8) 0%,
+    rgba(250, 0, 118, 0.8) 100%
+  );
+
+  padding: 2%;
+  position: relative;
+  min-height: 100vh;
+  filter: grayscale(20%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  padding: 15px 25px 0;
+  max-width: 480px;
+  min-height: 520px;
+  width: 100%;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+
+  -webkit-box-shadow: 0px 1px 5px 5px rgba(220, 220, 220, 0.34);
+  -moz-box-shadow: 0px 1px 5px 5px rgba(220, 220, 220, 0.34);
+  box-shadow: 0px 1px 5px 5px rgba(220, 220, 220, 0.34);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../images/mails.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  z-index: -1;
+  filter: blur(5px);
+}
+
+.login-form .mainText {
+  font-size: 32px;
+  line-height: 28px;
+  color: var(--primary);
+  font-weight: bold;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.login-form .description {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 30px auto;
+  text-align: center;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.login-form .formContainer {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.login-form .formContainer form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+}
+
+.login-form .formContainer .inputContainer {
+  position: relative;
+  height: 34px;
+  min-width: 235px;
+  position: relative;
+  margin: 5px 0;
+}
+
+.inputContainer .input {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  z-index: 5;
+  font-weight: 500;
+
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+  color: var(--secondary);
+  font-weight: bold;
+  padding: 7px 42px;
+  font-size: 16px;
+  outline: none;
+}
+
+.inputContainer .input:focus {
+  transition: all 2s ease-in-out;
+  color: var(--secondary);
+}
+
+.inputContainer .input::placeholder {
+  color: var(--secondary);
+}
+
+.inputContainer .icon {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  color: var(--primary);
+}
+
+.login-form .formContainer form button {
+  border: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  min-width: 235px;
+  border-radius: 20px;
+  background-color: var(--secondary);
+  color: #ffffff;
+  height: 34px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+}
+
+.login-form .formContainer form button:hover {
+  opacity: 0.7;
+  transition: all 0.3s ease-out;
+}
+
+.formContainer .signup-message {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 30px auto;
+  text-align: center;
+
+  font-weight: bold;
+}
+
+.formContainer .signup-message .link {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.formContainer .signup-message .link:hover {
+  text-decoration: underline;
+  transition: all 2s ease-in-out;
+}
+
+.formContainer .forgot-password {
+  margin: 15px 0;
+}
+.formContainer .forgot-password a {
+  color: var(--primary);
+  font-size: 16px;
+  line-height: 22px;
+}
+.formContainer .forgot-password a:hover {
+  color: var(--secondary);
+  transition: all 0.6s ease-in-out;
+}
+
+.messages .error{
+  list-style: none;
+  color: var(--secondary);
+  font-weight: bold;
+}

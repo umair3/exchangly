@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <!-- Favicon start -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+    <!-- Favicon end -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'login/css/signup.css' %}" />
+    <title>Register your account</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="signup-form">
+          <div class="mainText">Welcome to <strong>exchangly.com</strong></div>
+          {% if messages %}
+          <ul class="messages">
+              {% for message in messages %}
+              <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+              {% endfor %}
+          </ul>
+          {% endif %}
+          <p class="description">
+            Find your people. Engage your customers. Build your brand. Do it all
+            with <strong>exchangly.com</strong> Platform.
+            <span>
+              Already have an account?
+              <a class="link" href="/login"> Login </a>
+            </span>
+          </p>
+          <div class="formContainer">
+            <form method="POST" id="signup-form">
+              {% csrf_token %}
+              <div class="inputContainer">
+                <label for="email">
+                  <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </label>
+
+                <input
+                  id="email"
+                  placeholder="Email"
+                  type="email"
+                  name="email"
+                  class="input"
+                />
+              </div>
+
+              <div class="inputContainer">
+                <label for="password">
+                  <div class="icon">
+                    <i class="fas fa-unlock"></i>
+                  </div>
+                </label>
+
+                <input
+                  id="password"
+                  placeholder="Password"
+                  type="password"
+                  name="password"
+                  class="input"
+                />
+              </div>
+
+              <div class="labelWithCheckbox">
+                <input
+                  type="checkbox"
+                  name="disableUpdates"
+                  id="disableUpdates"
+                />
+
+                <label class="updateInfo" for="disableUpdates">
+                  I don't want to receive updates from <strong>exchangly.com</strong> related
+                  to marketing best practices, product and feature updates, and
+                  promotions.
+                </label>
+              </div>
+              <button class="g-recaptcha"
+                data-sitekey="6LeEzPcoAAAAAE0UJNiSs8D9T8DGK37lbKUZ7JsF"
+                data-callback='onSubmit'
+                data-action='submit' type="submit">Signup</button>
+
+              <p class="description">
+                By clicking the "Sign Up" button, you are creating a Mailchimp
+                account, and you agree to <strong>exchangly.com</strong>
+                <span>
+                  <a class="link" href="#"> Terms of Use </a>
+                  and
+                  <a class="link" href="#"> Privacy Policy. </a>
+                </span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeEzPcoAAAAAE0UJNiSs8D9T8DGK37lbKUZ7JsF"></script>
+    <script>
+    function onSubmit(token) {
+      console.log('signup.onSubmit('+token+')')
+      document.getElementById("signup-form").submit();
+    }
+    </script>
+  </body>
+</html>

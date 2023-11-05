@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv = "content-language" content = "en">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% load static %}
+    <!-- Favicon start -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+    <!-- Favicon end -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'login/css/login.css' %}" />
+    <title>Login your account</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="login-form">
+          <div class="mainText">Welcome to <strong>exchangly.com</strong></div>
+          {% if messages %}
+          <ul class="messages">
+              {% for message in messages %}
+              <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+              {% endfor %}
+          </ul>
+          {% endif %}
+          <p class="description">Please login to continue.</p>
+          <div class="formContainer">
+            <form method="post" id="login-form">
+              {% csrf_token %}
+              <div class="inputContainer">
+                <label for="email">
+                  <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </label>
+
+                <input
+                  id="email"
+                  placeholder="Email"
+                  type="email"
+                  name="email"
+                  class="input"
+                />
+              </div>
+
+              <div class="inputContainer">
+                <label for="password">
+                  <div class="icon">
+                    <i class="fas fa-unlock"></i>
+                  </div>
+                </label>
+
+                <input
+                  id="password"
+                  placeholder="Password"
+                  type="password"
+                  name="password"
+                  class="input"
+                />
+              </div>
+
+              <button class="g-recaptcha"
+                data-sitekey="6LfxnSQdAAAAABTcC5ykGGgAajEDBaJfEaDS3SWD"
+                data-callback='onSubmit'
+                data-action='submit' type="submit">Login</button>
+              <div class="forgot-password">
+                <a href="https://exchangly.com/forgot-password">Forgot Password?</a>
+              </div>
+              <div class="signup-message">
+                Don't have an account?
+                <span>
+                  <a class="link" href="/signup">Join now</a>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfxnSQdAAAAABTcC5ykGGgAajEDBaJfEaDS3SWD"></script>
+    <script>
+    function onSubmit(token) {
+      console.log('onSubmit('+token+')')
+      document.getElementById("login-form").submit();
+    }
+    </script>
+  </body>
+</html>

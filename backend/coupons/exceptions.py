@@ -1,0 +1,2 @@
+class InvalidCouponException(Exception):
+    pass

@@ -1,0 +1,3 @@
+class PaymentGatewayDoesNotExistException(Exception):
+    pass
+

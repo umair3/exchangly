@@ -1,0 +1,56 @@
+.unreset {
+  blockquote,
+  dl,
+  dd,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  figure,
+  p,
+  pre {
+    margin: revert;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: revert;
+    font-weight: revert;
+  }
+
+  ol,
+  ul {
+    list-style: revert;
+    margin: revert;
+    padding: revert;
+  }
+
+  img,
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
+    display: revert;
+    vertical-align: revert;
+  }
+
+  *,
+  ::before,
+  ::after {
+    border-width: revert;
+    border-style: revert;
+    border-color: revert;
+    font-family: revert;
+    box-sizing: revert;
+  }
+}

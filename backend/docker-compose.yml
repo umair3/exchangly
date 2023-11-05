@@ -1,0 +1,60 @@
+version: "3.9"
+   
+services:
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+      # host:docker
+    depends_on:
+      - web
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8090
+    volumes:
+      - .:/code
+    ports:
+      - "8090:8090"
+    environment:
+      - "MY_ENV=${MY_ENV}"
+#    depends_on:
+#      - postgres
+#  mail:
+#    image: apache/james:latest
+#    ports:
+#      - "465:465"
+#      - "993:993"
+#  shibizwp:
+#    image: wordpress
+#    restart: always
+#    ports:
+#      - "8080:8080"
+#    environment:
+#      WORDPRESS_DB_HOST: shibizmysql
+#      WORDPRESS_DB_USER: exampleuser
+#      WORDPRESS_DB_PASSWORD: examplepass
+#      WORDPRESS_DB_NAME: exampledb
+#  shibizmysql:
+#    image: mysql:5.7
+#    restart: always
+#    environment:
+#      MYSQL_DATABASE: exampledb
+#      MYSQL_USER: exampleuser
+#      MYSQL_PASSWORD: examplepass
+#      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+#  postgres:
+#    image: postgres:latest
+#    ports:
+#      - "54320:5432"
+##    volumes: ["vol1"]
+#    volumes:
+#      - vol1:/var/lib/postgresql
+#    environment:
+#      - POSTGRES_DB=postgres
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_PASSWORD=postgres
+#volumes:
+#  vol1:
+#    name: volume01
