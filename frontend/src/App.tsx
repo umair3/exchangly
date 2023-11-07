@@ -27,8 +27,11 @@ function App() {
   useEffect(() => {
     initialFetching();
   }, [initialFetching]);
-
+  console.log(`userLoading: ${userLoading}`)
+  console.log(`subscriptionLoading: ${subscriptionLoading}`)
   if (userLoading || subscriptionLoading) {
+    console.log(userLoading)
+    console.log(subscriptionLoading)
     return <CircularLoader />;
   }
   return <AppRoutes />;
