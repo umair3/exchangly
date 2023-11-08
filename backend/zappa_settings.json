@@ -4,7 +4,7 @@
         "django_settings": "mmbe.settings",
         "profile_name": "default",
         "project_name": "backend",
-        "runtime": "python3.12",
+        "runtime": "python3.11",
         "s3_bucket": "exchangly"
     }
 }
