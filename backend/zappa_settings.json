@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "aws_region": "ap-southeast-1",
+        "django_settings": "mmbe.settings",
+        "profile_name": "default",
+        "project_name": "backend",
+        "runtime": "python3.12",
+        "s3_bucket": "exchangly"
+    }
+}

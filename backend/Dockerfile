@@ -16,8 +16,7 @@ RUN crontab -l | { cat; echo "* * * * * bash /root/get_date.sh"; } | crontab -
 # Run the command on container startup
 CMD cron
 # RUN python manage.py makemigrations
-RUN python manage.py migrate
-CMD python manage.py runserver 0.0.0.0:8090
+CMD python manage.py migrate && python manage.py runserver 0.0.0.0:8090
 
 # CMD [ "/bin/bash", "-c", "--" ]
 # CMD [ "python manage.py runserver 0.0.0.0:8090" ]
