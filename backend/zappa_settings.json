@@ -3,7 +3,7 @@
         "aws_region": "ap-southeast-1",
         "django_settings": "mmbe.settings",
         "profile_name": "default",
-        "project_name": "backend",
+        "project_name": "exchangly",
         "runtime": "python3.11",
         "s3_bucket": "exchangly"
     }
