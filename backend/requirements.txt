@@ -9,7 +9,7 @@ cfn-flip==1.3.0
 chardet==5.2.0
 charset-normalizer==3.3.2
 click==8.1.7
-colorama==0.4.6
+colorama==0.4.4
 colorclass==2.2.2
 defusedxml==0.7.1
 diff-match-patch==20230430
@@ -26,7 +26,7 @@ django-test-without-migrations==0.6
 django-tinymce==3.6.1
 djangorestframework==3.14.0
 docopt==0.6.2
-docutils==0.20.1
+docutils==0.16
 durationpy==0.5
 environ==1.0
 et-xmlfile==1.1.0
@@ -46,7 +46,6 @@ pip-upgrader==1.4.15
 placebo==0.9.0
 platformdirs==3.11.0
 psycopg2==2.9.9
-psycopg2-binary==2.9.9
 pyasn1==0.5.0
 PyJWT==2.8.0
 pyotp==2.9.0
@@ -56,7 +55,7 @@ python-slugify==8.0.1
 pytz==2021.3
 PyYAML==6.0.1
 requests==2.31.0
-rsa==4.9
+rsa==4.7.2
 s3transfer==0.7.0
 sendgrid==6.10.0
 six==1.16.0

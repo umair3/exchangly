@@ -5,6 +5,8 @@
         "profile_name": "default",
         "project_name": "exchangly",
         "runtime": "python3.11",
-        "s3_bucket": "exchangly"
+        "s3_bucket": "exchangly",
+        "base_path": "/",
+        "keep_warm": false
     }
 }
