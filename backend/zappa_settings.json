@@ -8,6 +8,25 @@
         "s3_bucket": "exchangly",
         "base_path": "",
         "keep_warm": false,
-        "timeout_seconds": 60
+        "timeout_seconds": 30,
+        "environment_variables": {
+            "SECRET_KEY": "+ln1m+$8+xdo+2va=f!yn^0^gvo@qw&yo($_cl9-)rf2sl%=dd",
+            "DB_HOST": "exdb20231110.cvtfeuchgk5c.ap-southeast-1.rds.amazonaws.com",
+            "DB_NAME": "exdb",
+            "DB_USER": "postgres",
+            "DB_PASS": "nopassnopass",
+            "DB_PORT": "5432",
+            "APP_URL": "https://app.exchangly.com",
+            "ENVIRONMENT": "DEV",
+            "DEBUG": "True",
+            "EMAIL_SERVER": "NAME=ses;region_name=ap-southeast-1;aws_access_key_id=AKIAVXPDZH75MTGRHZ4F;aws_secret_access_key=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;",
+            "EMAIL": "NAME=ses;AWS_REGION=ap-southeast-1;AWS_ACCESS_KEY_ID=AKIAVXPDZH75MTGRHZ4F;AWS_SECRET_ACCESS_KEY=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;SENDER=marry.james@exchangly.com;BCC=umair.anwr@gmail.com",
+            "EMAIL_ADDRESSES": "bcc=xiixiiivi@gmail.com;sender=marry.james@exchangly.com;",
+            "RECAPTCHA_SITE_KEY": "6LeEzPcoAAAAAE0UJNiSs8D9T8DGK37lbKUZ7JsF",
+            "RECAPTCHA_SECRET_KEY": "6LeEzPcoAAAAANOcPPSrXn2TbeThXY1JWY5A9o8v",
+            "URL_LOGIN": "https://exchangly.com/login",
+            "URL_VERIFY": "https://exchangly.com/verify",
+            "URL_RESET_PASS": "https://exchangly.com/reset-password"
+        }
     }
 }
